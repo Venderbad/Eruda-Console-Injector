@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Eruda Console Injector
 // @namespace    https://venderbad.github.io
-// @version      0.0.1
+// @version      0.0.2
 // @description  A script to enable eruda console on any site
 // @author       Venderbad
 // @match        *://*/*
