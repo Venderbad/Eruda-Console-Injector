@@ -4,7 +4,7 @@
 // @version      0.0.1
 // @description  A script to enable eruda console on any site
 // @author       Venderbad
-// @match        *
+// @match        *://*/*
 // @grant        none
 // @run-at       document-body
 // @license      WTFPL
