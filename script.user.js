@@ -1,26 +1,19 @@
 // ==UserScript==
 // @name         Eruda Console Injector
 // @namespace    https://venderbad.github.io
-// @version      0.0.2
+// @version      0.0.3
 // @description  A script to enable eruda console on any site
 // @author       Venderbad
 // @match        *://*/*
-// @grant        none
+// @grant        GM_addElement
 // @run-at       document-body
 // @license      WTFPL
 // ==/UserScript==
 
-(function() {
+(function () {
     if (!/eruda=true/.test(window.location) && localStorage.getItem('active-eruda') != 'true') return;
-    var s = document.createElement("script");
-    var src = "//cdn.jsdelivr.net/npm/eruda";
-    s.src = src;
-    s.addEventListener(
-        "load",
-        function() {
-            eruda.init();
-        },
-        false
-    );
-    document.body.appendChild(s);
+
+    GM_addElement('script', {
+        src: "https://cdn.jsdelivr.net/npm/eruda",
+    }).onload = () => eruda.init();
 })();
